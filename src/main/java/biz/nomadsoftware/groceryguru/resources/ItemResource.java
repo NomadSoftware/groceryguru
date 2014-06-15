@@ -1,10 +1,10 @@
-package biz.nomadsoftware.market_minder.resources;
+package biz.nomadsoftware.groceryguru.resources;
 
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import biz.nomadsoftware.market_minder.dao.ItemDAO;
+import biz.nomadsoftware.groceryguru.dao.ItemDAO;
 
 @Path("/accounts/{account_id}/items")
 @Produces(MediaType.APPLICATION_JSON)

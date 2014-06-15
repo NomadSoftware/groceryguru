@@ -1,4 +1,4 @@
-package biz.nomadsoftware.market_minder.dao;
+package biz.nomadsoftware.groceryguru.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

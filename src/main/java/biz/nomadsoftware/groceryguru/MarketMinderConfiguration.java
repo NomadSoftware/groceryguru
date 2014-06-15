@@ -1,4 +1,4 @@
-package biz.nomadsoftware.market_minder;
+package biz.nomadsoftware.groceryguru;
 
 import io.dropwizard.Configuration;
 import io.dropwizard.db.DataSourceFactory;

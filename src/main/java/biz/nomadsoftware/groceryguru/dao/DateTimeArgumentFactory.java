@@ -1,4 +1,4 @@
-package biz.nomadsoftware.market_minder.dao;
+package biz.nomadsoftware.groceryguru.dao;
 
 import org.joda.time.base.BaseDateTime;
 import org.skife.jdbi.v2.StatementContext;

@@ -1,4 +1,4 @@
-package biz.nomadsoftware.market_minder;
+package biz.nomadsoftware.groceryguru;
 
 import io.dropwizard.Application;
 import io.dropwizard.jdbi.DBIFactory;
@@ -8,17 +8,17 @@ import io.dropwizard.setup.Environment;
 
 import org.skife.jdbi.v2.DBI;
 
-import biz.nomadsoftware.market_minder.dao.AccountDAO;
-import biz.nomadsoftware.market_minder.dao.AisleDAO;
-import biz.nomadsoftware.market_minder.dao.DateTimeArgumentFactory;
-import biz.nomadsoftware.market_minder.dao.ItemDAO;
-import biz.nomadsoftware.market_minder.dao.StoreDAO;
-import biz.nomadsoftware.market_minder.dao.UserDAO;
-import biz.nomadsoftware.market_minder.resources.AccountResource;
-import biz.nomadsoftware.market_minder.resources.AisleResource;
-import biz.nomadsoftware.market_minder.resources.ItemResource;
-import biz.nomadsoftware.market_minder.resources.StoreResource;
-import biz.nomadsoftware.market_minder.resources.UserResource;
+import biz.nomadsoftware.groceryguru.dao.AccountDAO;
+import biz.nomadsoftware.groceryguru.dao.AisleDAO;
+import biz.nomadsoftware.groceryguru.dao.DateTimeArgumentFactory;
+import biz.nomadsoftware.groceryguru.dao.ItemDAO;
+import biz.nomadsoftware.groceryguru.dao.StoreDAO;
+import biz.nomadsoftware.groceryguru.dao.UserDAO;
+import biz.nomadsoftware.groceryguru.resources.AccountResource;
+import biz.nomadsoftware.groceryguru.resources.AisleResource;
+import biz.nomadsoftware.groceryguru.resources.ItemResource;
+import biz.nomadsoftware.groceryguru.resources.StoreResource;
+import biz.nomadsoftware.groceryguru.resources.UserResource;
 
 import com.codahale.metrics.jdbi.InstrumentedTimingCollector;
 
