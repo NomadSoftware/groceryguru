@@ -34,15 +34,12 @@ public class MarketMinder extends Application<MarketMinderConfiguration>{
 	}
 
 	@Override
-	public void run(MarketMinderConfiguration configuration,
-			Environment environment) throws Exception {
+	public void run(MarketMinderConfiguration config, Environment env) throws Exception {
 		final DBIFactory factory = new DBIFactory();
-		final DBI jdbi = factory.build(environment,
-				configuration.getDataSourceFactory(), "postgresql");
-		jdbi.setTimingCollector(new InstrumentedTimingCollector(environment
-				.metrics()));
+		final DBI jdbi = factory.build(env, config.getDataSourceFactory(), "postgresql");
+		jdbi.setTimingCollector(new InstrumentedTimingCollector(env.metrics()));
 		jdbi.registerArgumentFactory(new DateTimeArgumentFactory());
-		JerseyEnvironment jersey = environment.jersey();
+		JerseyEnvironment jersey = env.jersey();
 		final AccountDAO accountDao = jdbi.onDemand(AccountDAO.class);
 		jersey.register(new AccountResource(accountDao));
 		final AisleDAO aisleDao = jdbi.onDemand(AisleDAO.class);
