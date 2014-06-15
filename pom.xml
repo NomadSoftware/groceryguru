@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>biz.nomadsoftware</groupId>
-	<artifactId>market-minder</artifactId>
+	<artifactId>groceryguru</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<dropwizard.version>0.7.0</dropwizard.version>
@@ -23,5 +23,24 @@
 			<artifactId>dropwizard-metrics</artifactId>
 			<version>${dropwizard.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>biz.nomadsoftware.</groupId>
+			<artifactId>groceryguru-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<!-- <version>${maven-compiler-plugin.version}</version> -->
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+				<inherited>true</inherited>
+			</plugin>
+		</plugins>
+	</build>
 </project>
