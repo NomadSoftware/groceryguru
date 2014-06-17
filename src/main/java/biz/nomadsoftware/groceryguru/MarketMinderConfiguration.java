@@ -1,7 +1,6 @@
 package biz.nomadsoftware.groceryguru;
 
 import io.dropwizard.Configuration;
-import io.dropwizard.db.DataSourceFactory;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -13,9 +12,9 @@ public class MarketMinderConfiguration extends Configuration {
 	@Valid
 	@NotNull
 	@JsonProperty
-	private final DataSourceFactory database = new DataSourceFactory();
+	private final JdbiDataSourceFactory database = new JdbiDataSourceFactory();
 
-	public DataSourceFactory getDataSourceFactory() {
+	public JdbiDataSourceFactory getJdbiDataSourceFactory() {
 		return database;
 	}
 }
