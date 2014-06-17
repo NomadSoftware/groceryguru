@@ -5,9 +5,14 @@ import java.sql.SQLException;
 
 public class JdbcUtil {
 
-	static Long getLong(ResultSet rs, String columnLabel) throws SQLException {
-		long l = rs.getLong(columnLabel);
-		return rs.wasNull() ? null : l;
+	static Long longValue(ResultSet r, String columnLabel) throws SQLException {
+		long l = r.getLong(columnLabel);
+		return r.wasNull() ? null : l;
+	}
+
+	static Integer intValue(ResultSet r, String columnLabel) throws SQLException {
+		int i = r.getInt(columnLabel);
+		return r.wasNull() ? null : i;
 	}
 
 }
