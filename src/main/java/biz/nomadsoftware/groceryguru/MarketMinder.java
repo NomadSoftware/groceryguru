@@ -13,12 +13,12 @@ import biz.nomadsoftware.groceryguru.dao.AisleDAO;
 import biz.nomadsoftware.groceryguru.dao.DateTimeArgumentFactory;
 import biz.nomadsoftware.groceryguru.dao.ItemDAO;
 import biz.nomadsoftware.groceryguru.dao.StoreDAO;
-import biz.nomadsoftware.groceryguru.dao.UserDAO;
+import biz.nomadsoftware.groceryguru.dao.DeviceDAO;
 import biz.nomadsoftware.groceryguru.resources.AccountResource;
 import biz.nomadsoftware.groceryguru.resources.AisleResource;
 import biz.nomadsoftware.groceryguru.resources.ItemResource;
 import biz.nomadsoftware.groceryguru.resources.StoreResource;
-import biz.nomadsoftware.groceryguru.resources.UserResource;
+import biz.nomadsoftware.groceryguru.resources.DeviceResource;
 
 import com.codahale.metrics.jdbi.InstrumentedTimingCollector;
 
@@ -48,8 +48,8 @@ public class MarketMinder extends Application<MarketMinderConfiguration>{
 		jersey.register(new ItemResource(itemDao));
 		final StoreDAO storeDao = jdbi.onDemand(StoreDAO.class);
 		jersey.register(new StoreResource(storeDao));
-		final UserDAO userDao = jdbi.onDemand(UserDAO.class);
-		jersey.register(new UserResource(userDao));
+		final DeviceDAO userDao = jdbi.onDemand(DeviceDAO.class);
+		jersey.register(new DeviceResource(userDao));
 	}
 
 }

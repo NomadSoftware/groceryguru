@@ -4,15 +4,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import biz.nomadsoftware.groceryguru.dao.UserDAO;
+import biz.nomadsoftware.groceryguru.dao.DeviceDAO;
 
 @Path("/accounts/{account_id}/users")
 @Produces(MediaType.APPLICATION_JSON)
-public class UserResource extends BaseResource {
+public class DeviceResource extends BaseResource {
 
-	private final UserDAO dao;
+	private final DeviceDAO dao;
 
-	public UserResource(UserDAO dao) {
+	public DeviceResource(DeviceDAO dao) {
 		this.dao = dao;
 	}
 
