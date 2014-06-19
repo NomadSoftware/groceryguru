@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MarketMinderConfiguration extends Configuration {
+public class GroceryGuruConfiguration extends Configuration {
 
 	@Valid
 	@NotNull

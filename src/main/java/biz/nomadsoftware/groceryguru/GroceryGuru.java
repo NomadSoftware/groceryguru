@@ -24,21 +24,21 @@ import biz.nomadsoftware.groceryguru.resources.StoreResource;
 
 import com.codahale.metrics.jdbi.InstrumentedTimingCollector;
 
-public class MarketMinder extends Application<MarketMinderConfiguration> {
+public class GroceryGuru extends Application<GroceryGuruConfiguration> {
 
-	private static final Logger log = LoggerFactory.getLogger(MarketMinder.class);
+	private static final Logger log = LoggerFactory.getLogger(GroceryGuru.class);
 
 	public static void main(String[] args) throws Exception {
-		new MarketMinder().run(args);
+		new GroceryGuru().run(args);
 	}
 
 	@Override
-	public void initialize(Bootstrap<MarketMinderConfiguration> bootstrap) {
+	public void initialize(Bootstrap<GroceryGuruConfiguration> bootstrap) {
 		//
 	}
 
 	@Override
-	public void run(MarketMinderConfiguration config, Environment env) throws Exception {
+	public void run(GroceryGuruConfiguration config, Environment env) throws Exception {
 		JdbiDataSourceFactory dsf = config.getJdbiDataSourceFactory();
 		final DBI jdbi = setupJdbi(dsf, env);
 		JerseyEnvironment jersey = env.jersey();
