@@ -1,4 +1,4 @@
-package biz.nomadsoftware.groceryguru.dao;
+package biz.nomadsoftware.jdbi;
 
 import org.joda.time.base.BaseDateTime;
 import org.skife.jdbi.v2.StatementContext;

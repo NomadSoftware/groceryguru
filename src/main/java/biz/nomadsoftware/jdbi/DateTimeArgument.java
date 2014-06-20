@@ -1,4 +1,4 @@
-package biz.nomadsoftware.groceryguru.dao;
+package biz.nomadsoftware.jdbi;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

@@ -21,7 +21,7 @@ public class AccountMapper implements ResultSetMapper<Account> {
 	public static Account map(ResultSet r) throws SQLException {
 		Account a = new Account();
 		a.setId(getLong(r, "id"));
-		a.setParent(getLong(r, "parent_id"));
+		a.setParentAccountId(getLong(r, "parent_id"));
 		a.setVersion(getInt(r, "version"));
 		// TODO
 		return a;
